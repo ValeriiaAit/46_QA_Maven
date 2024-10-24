@@ -40,7 +40,7 @@ public class PracticeFormTests extends TestBase {
     public void practiceFormParametersTest(String firstName, String lastName, String email, String phone) {
         new PracticeFormPage(app.driver)
                 .enterPersonalData(
-                        firstName, lastName, email, phone)
+                        firstName, lastName, System.currentTimeMillis()+email, phone)
                 .selectGender("Female")
                 .chooseDateAsString("04 May 1965")
 //                .chooseDate("1", "January", "2001")
